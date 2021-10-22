@@ -9,5 +9,5 @@ void main() {
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
-  return runApp(PlayStoreApp());
+  return runApp(const PlayStoreApp());
 }
