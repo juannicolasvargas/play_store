@@ -10,8 +10,12 @@ class AppView extends StatefulWidget {
 class _AppViewState extends State<AppView> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('App view'),
+    return const CustomScrollView(
+      slivers: <Widget>[
+        CupertinoSliverNavigationBar(
+          largeTitle: Text('Applications'),
+        ),
+      ],
     );
   }
 }

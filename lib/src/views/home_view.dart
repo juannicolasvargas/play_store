@@ -21,15 +21,11 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-        navigationBar: const CupertinoNavigationBar(
-          middle: Text('Play Store'),
+    return CupertinoTabScaffold(
+        tabBar: CupertinoTabBar(
+          items: tabBarItems,
         ),
-        child: CupertinoTabScaffold(
-            tabBar: CupertinoTabBar(
-              items: tabBarItems,
-            ),
-            tabBuilder: (BuildContext context, index) => _tabs[index]));
+        tabBuilder: (BuildContext context, index) => _tabs[index]);
   }
 
   List<BottomNavigationBarItem> get tabBarItems {

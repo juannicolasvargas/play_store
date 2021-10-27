@@ -10,8 +10,12 @@ class MovieView extends StatefulWidget {
 class _MovieViewState extends State<MovieView> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Movie view'),
+    return const CustomScrollView(
+      slivers: <Widget>[
+        CupertinoSliverNavigationBar(
+          largeTitle: Text('Movies'),
+        ),
+      ],
     );
   }
 }
